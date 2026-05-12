@@ -14,7 +14,7 @@ missing_docs = "warn"
 serde = {version = "1.0.219", features = ["derive"]}
 serde_yaml = "0.9.34"
 tracing = "0.1.41"
-tracing-subscriber = "0.3.19"
+tracing-subscriber = "0.3.20"
 validator = {version = "0.20.0" , features = ["derive"]}
 
 [lib]
@@ -30,7 +30,7 @@ depcheck = "cargo +nightly udeps"
 format = "cargo fmt --all"
 lint = "cargo clippy --all-targets --all-features -- -D warnings"
 typecheck = "cargo check"
-audit-packages = "cargo audit --ignore RUSTSEC-2025-0055"
+audit-packages = "cargo audit"
 checks = "cargo cmd depcheck && cargo cmd format && cargo cmd lint && cargo cmd typecheck && cargo cmd audit-packages"
 unit = "cargo test --lib"
 integration = "cargo test --test integration_test"
